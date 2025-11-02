@@ -6,7 +6,7 @@ import { getDatabase } from "https://www.gstatic.com/firebasejs/10.12.0/firebase
 
 // ✅ Your Firebase Configuration (from your Firebase console)
 const firebaseConfig = {
-  apiKey: "AIzaSyAAMaCrbgspznOqKa0pSRb51cYLZOIfGfw",
+  apiKey: "",
   authDomain: "pulse-6ab9f.firebaseapp.com",
   databaseURL: "https://pulse-6ab9f-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "pulse-6ab9f",
@@ -23,3 +23,4 @@ const db = getDatabase(app);
 
 // ✅ Export db for other modules
 export { db };
+
