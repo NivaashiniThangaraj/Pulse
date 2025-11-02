@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedCare Hospital - Advanced ICU Monitoring System</title>
+  <script type="module" crossorigin src="/assets/landing-CXzyZ3iA.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="stylesheet" crossorigin href="/assets/landing-Df-HPoSp.css">
+</head>
+<body>
+  <div class="door-container" id="doorContainer">
+    <div class="door door-left"></div>
+    <div class="door door-right"></div>
+    <div class="stethoscope-wrapper">
+      <svg class="stethoscope" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="20" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M 42 28 Q 50 40 35 55" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M 58 28 Q 50 40 65 55" fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="35" cy="60" r="6" fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="65" cy="60" r="6" fill="none" stroke="currentColor" stroke-width="2"/>
+      </svg>
+    </div>
+    <div class="loading-text">
+      <div class="pulse-dot"></div>
+      <span>Accessing MedCare System</span>
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" stroke="currentColor" stroke-width="2" fill="none"/>
+          <path d="M12 6v12M9 12h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>MedCare Hospital</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#departments">Departments</a></li>
+        <li><a href="#doctors">Expert Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn-secondary" onclick="document.getElementById('appointmentModal').style.display='flex'">Book Appointment</button>
+        <button id="navModeToggle" class="btn-mode">🌙</button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Advanced ICU Monitoring System</h1>
+        <p class="hero-subtitle">Real-time patient monitoring, advanced analytics, and integrated care management</p>
+        <div class="hero-buttons">
+          <button class="btn-primary" onclick="window.location.href='index.html'">Access Dashboard</button>
+          <button class="btn-secondary" onclick="document.getElementById('appointmentModal').style.display='flex'">Schedule Consultation</button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-illustration">
+          <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:rgb(16,185,129);stop-opacity:0.1" />
+                <stop offset="100%" style="stop-color:rgb(14,165,233);stop-opacity:0.1" />
+              </linearGradient>
+            </defs>
+            <circle cx="150" cy="150" r="130" fill="url(#grad1)" stroke="var(--primary)" stroke-width="2" opacity="0.5"/>
+            <circle cx="150" cy="150" r="100" fill="none" stroke="var(--secondary)" stroke-width="2" opacity="0.3" stroke-dasharray="10,5"/>
+            <g class="pulse-circle">
+              <circle cx="150" cy="150" r="70" fill="none" stroke="var(--primary)" stroke-width="2.5" opacity="0.6"/>
+            </g>
+            <circle cx="150" cy="150" r="40" fill="var(--primary)" opacity="0.15"/>
+            <path d="M 130 150 Q 150 120 170 150 Q 150 180 130 150" fill="none" stroke="var(--primary)" stroke-width="2.5" opacity="0.8"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="section-header">
+        <h2>Cutting-Edge Features</h2>
+        <p>Comprehensive monitoring and management tools for modern healthcare</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 6v6l4 2.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Real-Time Monitoring</h3>
+          <p>Live vital signs tracking with instant alerts for critical changes</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 12h18M12 3v18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M7 9l10 0M7 12l10 0M7 15l10 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Advanced Analytics</h3>
+          <p>Comprehensive data visualization and predictive analytics</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2z" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>24/7 Access</h3>
+          <p>Round-the-clock system availability and support</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 21H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2z" stroke="currentColor" stroke-width="2"/>
+              <path d="M9 9h6v3H9z" fill="currentColor" opacity="0.3"/>
+              <path d="M9 14h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Patient Records</h3>
+          <p>Secure, integrated patient data management system</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" stroke="currentColor" stroke-width="2"/>
+              <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Secure System</h3>
+          <p>HIPAA-compliant encryption and data protection</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L2 7v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z" stroke="currentColor" stroke-width="2"/>
+              <path d="M10 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Alerts & Notifications</h3>
+          <p>Intelligent alert system with customizable thresholds</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="departments" class="departments">
+      <div class="section-header">
+        <h2>Our Departments</h2>
+        <p>Specialized care across multiple medical disciplines</p>
+      </div>
+      <div class="departments-grid">
+        <div class="dept-card">
+          <div class="dept-icon">🏥</div>
+          <h3>Intensive Care Unit</h3>
+          <p>Critical care with advanced monitoring systems</p>
+        </div>
+        <div class="dept-card">
+          <div class="dept-icon">❤️</div>
+          <h3>Cardiology</h3>
+          <p>Heart and cardiovascular disease treatment</p>
+        </div>
+        <div class="dept-card">
+          <div class="dept-icon">🫁</div>
+          <h3>Pulmonology</h3>
+          <p>Respiratory system care and treatment</p>
+        </div>
+        <div class="dept-card">
+          <div class="dept-icon">🧠</div>
+          <h3>Neurology</h3>
+          <p>Neurological disorders and brain health</p>
+        </div>
+        <div class="dept-card">
+          <div class="dept-icon">🦷</div>
+          <h3>Emergency Medicine</h3>
+          <p>Trauma and emergency response care</p>
+        </div>
+        <div class="dept-card">
+          <div class="dept-icon">⚕️</div>
+          <h3>Surgery</h3>
+          <p>General and specialized surgical services</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="doctors" class="doctors">
+      <div class="section-header">
+        <h2>Expert Medical Team</h2>
+        <p>Renowned specialists dedicated to patient care</p>
+      </div>
+      <div class="doctors-grid">
+        <div class="doctor-card">
+          <div class="doctor-image" style="background: linear-gradient(135deg, #10b981, #34d399);">
+            <span class="doctor-initial">DR</span>
+          </div>
+          <h3>Dr. Robert Chen</h3>
+          <p class="specialty">Chief ICU Specialist</p>
+          <p class="bio">20+ years of critical care experience</p>
+          <div class="doctor-rating">⭐ 4.9/5</div>
+        </div>
+        <div class="doctor-card">
+          <div class="doctor-image" style="background: linear-gradient(135deg, #0ea5e9, #38bdf8);">
+            <span class="doctor-initial">SN</span>
+          </div>
+          <h3>Dr. Sarah Newman</h3>
+          <p class="specialty">Cardiology Director</p>
+          <p class="bio">18+ years in cardiac care</p>
+          <div class="doctor-rating">⭐ 4.8/5</div>
+        </div>
+        <div class="doctor-card">
+          <div class="doctor-image" style="background: linear-gradient(135deg, #f59e0b, #fbbf24);">
+            <span class="doctor-initial">MJ</span>
+          </div>
+          <h3>Dr. Michael Johnson</h3>
+          <p class="specialty">Emergency Medicine Head</p>
+          <p class="bio">15+ years trauma expertise</p>
+          <div class="doctor-rating">⭐ 4.7/5</div>
+        </div>
+        <div class="doctor-card">
+          <div class="doctor-image" style="background: linear-gradient(135deg, #ef4444, #f87171);">
+            <span class="doctor-initial">EK</span>
+          </div>
+          <h3>Dr. Emma Kumar</h3>
+          <p class="specialty">Neurology Specialist</p>
+          <p class="bio">16+ years in neurology</p>
+          <div class="doctor-rating">⭐ 4.9/5</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stats" class="stats">
+      <div class="stat-item">
+        <div class="stat-number">50K+</div>
+        <div class="stat-label">Patients Treated</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">200+</div>
+        <div class="stat-label">Medical Staff</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">98%</div>
+        <div class="stat-label">Success Rate</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">24/7</div>
+        <div class="stat-label">Emergency Care</div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="contact-content">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>Location</h4>
+              <p>123 Medical Center Drive<br>Healthcare City, HC 12345</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <h4>Phone</h4>
+              <p>+1 (555) 123-4567<br>Emergency: +1 (555) 999-8888</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <h4>Email</h4>
+              <p>info@medcarehospital.com<br>emergency@medcarehospital.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>MedCare Hospital</h4>
+        <p>Delivering excellence in patient care through advanced technology and compassionate service.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#departments">Departments</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">HIPAA Compliance</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 MedCare Hospital. All rights reserved. | Protecting your health, securing your data.</p>
+    </div>
+  </footer>
+
+  <div id="appointmentModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="document.getElementById('appointmentModal').style.display='none'">&times;</span>
+      <h2>Book an Appointment</h2>
+      <form id="appointmentForm">
+        <div class="form-group">
+          <label for="patientName">Full Name *</label>
+          <input type="text" id="patientName" name="patientName" required>
+        </div>
+        <div class="form-group">
+          <label for="patientEmail">Email *</label>
+          <input type="email" id="patientEmail" name="patientEmail" required>
+        </div>
+        <div class="form-group">
+          <label for="patientPhone">Phone *</label>
+          <input type="tel" id="patientPhone" name="patientPhone" required>
+        </div>
+        <div class="form-group">
+          <label for="department">Department *</label>
+          <select id="department" name="department" required>
+            <option value="">Select Department</option>
+            <option value="ICU">Intensive Care Unit</option>
+            <option value="Cardiology">Cardiology</option>
+            <option value="Pulmonology">Pulmonology</option>
+            <option value="Neurology">Neurology</option>
+            <option value="Emergency">Emergency Medicine</option>
+            <option value="Surgery">Surgery</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="appointmentDate">Preferred Date *</label>
+          <input type="date" id="appointmentDate" name="appointmentDate" required>
+        </div>
+        <div class="form-group">
+          <label for="notes">Additional Notes</label>
+          <textarea id="notes" name="notes" rows="3" placeholder="Any additional information..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Book Appointment</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
