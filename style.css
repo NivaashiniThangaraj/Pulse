@@ -1,0 +1,148 @@
+:root {
+  --bg-color: #f7fafc;
+  --text-color: #222;
+  --card-bg: #fff;
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #eee;
+  --card-bg: #1e1e1e;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: 0.3s ease;
+}
+
+nav {
+  background: linear-gradient(90deg, #0077ff, #00bcd4);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#modeToggle {
+  background: white;
+  color: #0077ff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#modeToggle:hover {
+  background: #e3f2fd;
+}
+
+main {
+  padding: 2rem;
+}
+
+h2 {
+  color: #0077ff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.status {
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.status.occupied { color: #e53935; }
+.status.vacant { color: #43a047; }
+.status.cleaned { color: #1e88e5; }
+
+#summary {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.summary-card {
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.summary-card.occupied h3 { color: #e53935; }
+.summary-card.vacant h3 { color: #43a047; }
+.summary-card.cleaned h3 { color: #1e88e5; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+th {
+  background-color: #0077ff;
+  color: white;
+}
+
+.filter {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.filter input {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.role-badge {
+  border-radius: 8px;
+  padding: 4px 10px;
+  color: white;
+  font-weight: 500;
+}
+
+.role-patient { background: #f44336; }
+.role-nurse { background: #00bcd4; }
+.role-doctor { background: #4caf50; }
+.role-cleaner { background: #ff9800; }
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #0077ff;
+  color: white;
+  margin-top: 2rem;
+}
