@@ -174,17 +174,7 @@ const SUPABASE_ANON_KEY = 'your-anon-key';
 - [ ] AI-powered diagnostics
 - [ ] Multi-language support
 
-## Support
 
-For issues or questions:
-- Email: support@medcarehospital.com
-- Phone: +1 (555) 123-4567
-- Emergency: +1 (555) 999-8888
 
-## License
 
-MedCare Hospital System © 2024. All rights reserved.
 
----
-
-**Developed with ❤️ for Smarter Healthcare**
