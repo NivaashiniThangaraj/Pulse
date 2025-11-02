@@ -1,4 +1,4 @@
-# MedCare Hospital - Advanced ICU Monitoring System
+# PULSE: Patient Utilization and Logging System for Efficiency
 
 A comprehensive healthcare management platform featuring real-time ICU monitoring, appointment booking, and integrated hospital services.
 
@@ -173,6 +173,7 @@ const SUPABASE_ANON_KEY = 'your-anon-key';
 - [ ] Integration with medical devices
 - [ ] AI-powered diagnostics
 - [ ] Multi-language support
+
 
 
 
