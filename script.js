@@ -16,7 +16,13 @@ const cleanedBeds = document.getElementById("cleanedBeds");
 // 🌗 Dark/Light Mode Toggle
 document.getElementById("modeToggle").addEventListener("click", () => {
   document.body.classList.toggle("dark");
+  localStorage.setItem("darkMode", document.body.classList.contains("dark"));
 });
+
+// Initialize dark mode from localStorage
+if (localStorage.getItem("darkMode") === "true") {
+  document.body.classList.add("dark");
+}
 
 // 🕒 Format Timestamp "2025-10-31 21:18:22" → readable date/time
 function formatTimestamp(ts) {

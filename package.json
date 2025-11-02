@@ -1,0 +1,27 @@
+{
+  "name": "medcare-hospital",
+  "version": "1.0.0",
+  "description": "Advanced ICU Monitoring System with Hospital Management",
+  "type": "module",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "hospital",
+    "icu",
+    "monitoring",
+    "healthcare",
+    "medical"
+  ],
+  "author": "MedCare Hospital",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.38.0"
+  }
+}
